@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+
+nav{
+background-color: darkred;
+height: 60px;
+position: fixed;
+width: 100%;   
+}
+
+nav > a {
+    margin: 20px;
+    margin-right: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    float:right;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: goldenrod;
+}
+
+header > img{
+ width:100%;
+}
