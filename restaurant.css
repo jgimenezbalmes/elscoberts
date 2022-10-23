@@ -7,8 +7,10 @@ body{
 
 nav{
 background-color: darkred;
+
 height: 60px;
-position: fixed;
+top: 0;
+position: sticky;
 width: 100%;   
 }
 
@@ -26,6 +28,19 @@ a:hover{
     color: goldenrod;
 }
 
-header > img{
- width:100%;
+header{
+    
+   
+    
+}
+
+#imgheader{
+    width:100%;
+}
+
+
+#titol{
+ 
+    
+   
 }
