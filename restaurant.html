@@ -1,60 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Restaurant Els Coberts</title>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="restaurant.css">
-    </head>
-    <body>
-        <nav>
-            <a href="">Nosaltres</a> 
-            <a href="">Carta</a>  
-            <a href="">Galeria</a>   
-        </nav>
-        <header>
-            <img src="header.jpg" alt="taula de restaurant els coberts">
-            <div id="titol">
-                <h2>Restaurant <span id="negreta">els Coberts</span></h2>
-                <p>Blood for the blood god! Skulls for the skull throne!</p>
+
+<head>
+    <title>Restaurant Els Coberts</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+
+<body>
+    <!-- Menú principal -->
+    <nav>
+        <a href="">Nosaltres</a>
+        <a href="">Carta</a>
+        <a href="">Galeria</a>
+    </nav>
+    <!-- Foto + titol del restaurant -->
+    <header>
+        <img src="header.jpg" alt="taula de restaurant els coberts">
+        <div id="titol">
+            <h2>Restaurant <span id="negreta">els Coberts</span></h2>
+            <p>Blood for the blood god! Skulls for the skull throne!</p>
+        </div>
+    </header>
+    <!-- Div que conté el sobre nosaltres, carta i galeria d'imatges-->
+    <container>
+        <div id="contenidor">
+            <h2>Sobre Nosaltres</h2>
+            <div class="text">
+                <img src="nosaltres1.jpg" id="img-float-left" alt="Imatge de sala restaurant">
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.</p>
             </div>
-        </header>
-        <container>
-            <div id="contenidor">
-                <h2>Sobre Nosaltres</h2>
-                <div class="text">
-                    <img src="nosaltres1.jpg" id="img-float-left" alt="Imatge de sala restaurant">
-                    <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="text">
+                <img src="nosaltres2.jpg" id="img-float-right" alt="Barra del bar del restaurant">
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.</p>
+            </div>
+            <h2>Carta</h2>
+            <!-- Taula amb informació de la carta -->
+            <section class="grid-container">
+                <div id="menusup">
+                    <p>
+                    <h2>Menú</h2>
+                    </p>
                 </div>
-                <div class="text">
-                    <img src="nosaltres2.jpg" id="img-float-right" alt="Barra del bar del restaurant">
-                    <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>  
-                
-                <div><!-- GRID --> </div>
-
-                <h2>Galeria d'imatges</h2>
-                <div class="flex-container">
-                    
-                    <div><img src="img_salad.jpg" class="oscuro" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" class="oscuro" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" class="oscuro" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" alt="Amanida"></div>
-                    <div><img src="img_salad.jpg" class="oscuro" alt="Amanida"></div>
-                  </div>
+                <div id="menu1">
+                    <p>Menú 1</p>
+                </div>
+                <div id="contingut">
+                    <h2>Contingut</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem inventore nam excepturi
+                        placeat error saepe ipsam dolorum eum iusto? Quos, tempora repellat dolorem corporis vel
+                        inventore saepe ipsum dignissimos voluptatibus.</p>
+                </div>
+                <div id="fotopasta"><img src="menu_pasta.jpg" alt="Plat de pasta"></div>
+                <div id="fotostarter"><img src="menu_starter.jpg" alt="Entrant del menú"></div>
+                <div id="menu2">
+                    <p>Menú 2</p>
+                </div>
+                <div id="contingut2">
+                    <h2>Contingut</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem inventore nam excepturi
+                        placeat error saepe ipsam dolorum eum iusto? Quos, tempora repellat dolorem corporis vel
+                        inventore saepe ipsum dignissimos voluptatibus.</p>
+                </div>
+                <div id="fotomeat"><img src="menu_meat.jpg" alt="Plat de carn"></div>
+                <div id="fotofish"><img src="menu_fish.jpg" alt="Plat de peix"></div>
+            </section>
+            <h2>Galeria d'imatges</h2>
+            <!-- Div amb galeria interactiva d'imatges (s'enfosqueixen en hover)-->
+            <div class="flex-container">
+                <div><img src="img_salad.jpg" class="fosc" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" class="fosc" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" class="fosc" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" alt="Amanida"></div>
+                <div><img src="img_salad.jpg" class="fosc" alt="Amanida"></div>
             </div>
+        </div>
+    </container>
+    <footer>
+        <div>
+            <img src="ic_contact.jpg" alt="icona email">
+            <p>worldeaters@chaos.com</p>
+            <img src="ic_phone.jpg" alt="icona telefon">
+            <p>666666666</p>
+        </div>
+        <p>Restaurant Els Coberts</p>
+    </footer>
+</body>
 
-        </container>
-        <footer>
-            <div>
-                <img src="ic_contact.jpg" alt="icona email">
-                <p>worldeaters@chaos.com</p>
-                <img src="ic_phone.jpg" alt="icona telefon">
-                <p>666666666</p> 
-            </div>
-            <p>Restaurant Els Coberts</p>
-        </footer>
-    </body>
 </html>
