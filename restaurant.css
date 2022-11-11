@@ -146,11 +146,23 @@ header>img {
     padding: 1%;
     padding-left: 2%;
     padding-right: 2%;
+    position: relative;
+}
+/*Definicio del text amb fons negre translucid a sobre d'imatge. Es fa el mateix amb la resta d'imatges*/
+#fotopasta>p {
+    background-color: black;
+    opacity: 50%;
+    position: absolute;
+    bottom: -8px;
+    width: 96%;
+    color: white;
+    text-align: center;
 }
 
 /*Es fica 100 % de width d'imatge dins el div per a que no sobresurti l'amplada d'aquest*/
 #fotopasta>img {
     width: 100%;
+    
 }
 
 #fotostarter {
@@ -158,6 +170,17 @@ header>img {
     padding: 1%;
     padding-left: 2%;
     padding-right: 2%;
+    position: relative;
+}
+
+#fotostarter>p{
+    background-color: black;
+    opacity: 50%;
+    position: absolute;
+    bottom: -8px;
+    width: 96%;
+    color: white;
+    text-align: center;
 }
 
 #fotostarter>img {
@@ -184,6 +207,17 @@ header>img {
     padding: 1%;
     padding-left: 2%;
     padding-right: 2%;
+    position: relative;
+}
+
+#fotomeat>p{
+    background-color: black;
+    opacity: 50%;
+    position: absolute;
+    bottom: -8px;
+    width: 96%;
+    color: white;
+    text-align: center;
 }
 
 #fotomeat>img {
@@ -195,6 +229,17 @@ header>img {
     padding: 1%;
     padding-left: 2%;
     padding-right: 2%;
+    position: relative;
+}
+
+#fotofish>p{
+    background-color: black;
+    opacity: 50%;
+    position: absolute;
+    bottom: -8px;
+    width: 96%;
+    color: white;
+    text-align: center;
 }
 
 #fotofish>img {
@@ -267,3 +312,85 @@ footer>p {
     margin-right: 2%;
 }
 
+/*SEGONA PART DE LA PRÀCTICA*/
+
+@media only screen and (max-width: 768px){
+    nav{
+        background-color: white;
+    }
+
+    nav > a{
+        float: left;
+        margin-left: 20px;
+        color: black;
+    }
+
+    #img-float-left{
+        width: 100%;
+    }
+
+    #img-float-right{
+        width: 100%;
+    }
+
+    .grid-container {
+        /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+        grid-template-rows: 1fr 2fr 3fr 3fr 2fr 3fr 3fr;
+        /*Determinació de quins espais ocupa cada div del grid*/
+        grid-template-areas:
+            "menusup menusup menusup"
+            "menu1 contingut contingut"
+            "menu1 fotopasta fotopasta"
+            "menu1 fotostarter fotostarter"
+            "menu2 contingut2 contingut2"
+            "menu2 fotomeat fotomeat"
+            "menu2 fotofish fotofish";
+    }
+
+    .flex-container>div {
+        width: 48%;
+    }
+
+}
+
+@media only screen and (max-width: 576px){
+    nav{
+        background-color: white;
+    }
+
+    nav > a{
+        float: left;
+        margin-left: 20px;
+        color: black;
+    }
+
+    .text>img {
+        border-radius: 5%;
+        width: 100%;
+    }
+
+
+    .contenidor > h2 {
+        text-align: center;
+    }
+
+    .grid-container {
+        /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+        grid-template-rows: 1fr 1fr 2fr 3fr 3fr 1fr 2fr 3fr 3fr;
+        /*Determinació de quins espais ocupa cada div del grid*/
+        grid-template-areas:
+            "menusup menusup menusup"
+            "menu1 menu1 menu1"
+            "contingut contingut contingut"
+            "fotopasta fotopasta fotopasta"
+            "fotostarter fotostarter fotostarter"
+            "menu2 menu2 menu2"
+            "contingut2 contingut2 contingut2"
+            "fotomeat fotomeat fotomeat"
+            "fotofish fotofish fotofish";
+    }
+
+    .flex-container>div {
+        width: 96%;
+    }
+}
