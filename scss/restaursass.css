@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* Establim tipus de font i tamany per a tot el lloc web */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
+
+nav {
+  background-color: darkred;
+  height: 60px;
+  top: 0;
+  position: sticky;
+  width: 100%;
+  z-index: 999; }
+  nav a {
+    margin: 20px;
+    margin-right: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    float: right; }
+    nav a:hover {
+      text-decoration: underline;
+      color: goldenrod; }
+
+/*Determinació de color de titol i posició del div*/
+header {
+  position: relative;
+  color: white;
+  /*Fem que la imatge de fons ocupi tota l'amplada del lloc web*/
+  /*Determinem posició i tamany del text a sobre de la imatge del header*/ }
+  header img {
+    width: 100%; }
+  header #titol {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    font-size: 1.5rem;
+    /*Fem que el text del header es fiqui quasi en negreta*/ }
+    header #titol h2 {
+      font-weight: 400;
+      /*Id del span del text del header, que volem que estigui en negreta*/ }
+      header #titol h2 #negreta {
+        font-weight: bold; }
+
+/*Determinem tamany i marge del div que conté tot menys el header i el footer*/
+#contenidor {
+  width: 80%;
+  margin-left: 10%;
+  /*Determinem que aquesta classe té flex, i flex-wrap fa que els seus fills es puguin colocar en diverses linies*/ }
+  #contenidor h2 {
+    margin-top: 4%;
+    margin-bottom: 2%; }
+  #contenidor .text {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 2%; }
+    #contenidor .text img {
+      border-radius: 5%;
+      width: 20%; }
+  #contenidor #img-float-left {
+    float: left;
+    margin-right: 2%; }
+  #contenidor #img-float-right {
+    float: right;
+    margin: 2%; }
+  #contenidor .grid-container {
+    display: grid;
+    /*Hi ha tres columnes, la primera més petita, i les altres dos iguals*/
+    grid-template-columns: 10% 45% 45%;
+    /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+    grid-template-rows: 1fr 2fr 3fr 2fr 3fr;
+    /*Determinació de quins espais ocupa cada div del grid*/
+    grid-template-areas: "menusup menusup menusup" "menu1 contingut contingut" "menu1 fotopasta fotostarter" "menu2 contingut2 contingut2" "menu2 fotomeat fotofish";
+    gap: 0px 0px;
+    /*Determinacio del color de fons, tet, i marges de la part "menu" del grid*/
+    /*Determinem marge, negreta i posició del text (centrat) de la cel·la del menu 1*/
+    /*A partir d'aqui es designen paddings de diferents divs*/ }
+    #contenidor .grid-container #menusup {
+      /*Amb grid-area correlacionem aquest id amb el que s'ha posat a grid-template-areas. Sera igual en els ids posteriors*/
+      grid-area: menusup;
+      text-align: center;
+      margin-bottom: 2%;
+      background-color: darkblue;
+      color: white; }
+    #contenidor .grid-container #menu1 {
+      grid-area: menu1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      margin: 3%;
+      font-weight: bold; }
+    #contenidor .grid-container #contingut {
+      grid-area: contingut;
+      padding: 1%; }
+    #contenidor .grid-container #fotopasta {
+      grid-area: fotopasta;
+      padding: 1%;
+      padding-left: 2%;
+      padding-right: 2%;
+      position: relative;
+      /*Es fica 100 % de width d'imatge dins el div per a que no sobresurti l'amplada d'aquest*/ }
+      #contenidor .grid-container #fotopasta p {
+        background-color: black;
+        opacity: 50%;
+        position: absolute;
+        bottom: -8px;
+        width: 96%;
+        color: white;
+        text-align: center; }
+      #contenidor .grid-container #fotopasta img {
+        width: 100%; }
+    #contenidor .grid-container #fotostarter {
+      grid-area: fotostarter;
+      padding: 1%;
+      padding-left: 2%;
+      padding-right: 2%;
+      position: relative; }
+      #contenidor .grid-container #fotostarter p {
+        background-color: black;
+        opacity: 50%;
+        position: absolute;
+        bottom: -8px;
+        width: 96%;
+        color: white;
+        text-align: center; }
+      #contenidor .grid-container #fotostarter img {
+        width: 100%; }
+    #contenidor .grid-container #menu2 {
+      grid-area: menu2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      margin: 3%;
+      font-weight: bold; }
+    #contenidor .grid-container #contingut2 {
+      grid-area: contingut2;
+      padding: 1%; }
+    #contenidor .grid-container #fotomeat {
+      grid-area: fotomeat;
+      padding: 1%;
+      padding-left: 2%;
+      padding-right: 2%;
+      position: relative; }
+      #contenidor .grid-container #fotomeat p {
+        background-color: black;
+        opacity: 50%;
+        position: absolute;
+        bottom: -8px;
+        width: 96%;
+        color: white;
+        text-align: center; }
+      #contenidor .grid-container #fotomeat img {
+        width: 100%; }
+    #contenidor .grid-container #fotofish {
+      grid-area: fotofish;
+      padding: 1%;
+      padding-left: 2%;
+      padding-right: 2%;
+      position: relative; }
+      #contenidor .grid-container #fotofish p {
+        background-color: black;
+        opacity: 50%;
+        position: absolute;
+        bottom: -8px;
+        width: 96%;
+        color: white;
+        text-align: center; }
+      #contenidor .grid-container #fotofish img {
+        width: 100%; }
+  #contenidor .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*Determinacio d'amplada, borders, i margins de cadascun dels divs del flex-container*/ }
+    #contenidor .flex-container div {
+      background-color: white;
+      width: 24%;
+      border: 3px solid;
+      border-color: white;
+      margin-bottom: 1%;
+      margin-top: 1%;
+      /*Si fem hover a una imatge, sortira un border gris al voltant d'aquesta*/ }
+      #contenidor .flex-container div .fosc {
+        /*Classe que fa que la imatge es vegi fosca per defecte (les de les vores)*/
+        filter: brightness(50%); }
+      #contenidor .flex-container div img {
+        width: 100%;
+        /*Imatge es fara mes fosca al fer hover*/ }
+        #contenidor .flex-container div imghover {
+          filter: brightness(40%); }
+      #contenidor .flex-container divhover {
+        border: 3px solid gray; }
+
+/*Ens serveix per a que els elements saltin de linia quan l'amplada del navegador sigui menor a 780px*/
+@media (max-width: 780px) {
+  .flex-container > div {
+    /*Amb això, cada div ocuparà mig container, per tant, passaran de ser 4 per linia a ser 2*/
+    width: 48%; } }
+/*Determinem colors i amplada pel footer. Fem flex perque s'aliniin els elements com desitgem*/
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between; }
+  footer div {
+    display: flex; }
+    footer div img {
+      width: fit-content;
+      height: fit-content;
+      margin: 5%; }
+  footer p {
+    margin-right: 2%; }
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: white; }
+    nav a {
+      float: left;
+      margin-left: 20px;
+      color: black; }
+
+  #img-float-left {
+    width: 100%; }
+
+  #img-float-right {
+    width: 100%; }
+
+  .grid-container {
+    /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+    grid-template-rows: 1fr 2fr 3fr 3fr 2fr 3fr 3fr;
+    grid-template-areas: "menusup menusup menusup" "menu1 contingut contingut" "menu1 fotopasta fotopasta" "menu1 fotostarter fotostarter" "menu2 contingut2 contingut2" "menu2 fotomeat fotomeat" "menu2 fotofish fotofish"; }
+
+  .flex-container > div {
+    width: 48%; } }
+@media only screen and (max-width: 576px) {
+  nav {
+    background-color: white; }
+    nav a {
+      float: left;
+      margin-left: 20px;
+      color: black; }
+
+  .text > img {
+    border-radius: 5%;
+    width: 100%; }
+
+  .contenidor > h2 {
+    text-align: center; }
+
+  .grid-container {
+    /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+    grid-template-rows: 1fr 1fr 2fr 3fr 3fr 1fr 2fr 3fr 3fr;
+    /*Determinació de quins espais ocupa cada div del grid*/
+    grid-template-areas: "menusup menusup menusup" "menu1 menu1 menu1" "contingut contingut contingut" "fotopasta fotopasta fotopasta" "fotostarter fotostarter fotostarter" "menu2 menu2 menu2" "contingut2 contingut2 contingut2" "fotomeat fotomeat fotomeat" "fotofish fotofish fotofish"; }
+
+  .flex-container > div {
+    width: 96%; } }
+
+/*# sourceMappingURL=restaursass.css.map */

@@ -1,0 +1,30 @@
+
+$colorlletra: white;
+$imatgeampl: 100%;
+$fontweight: 400;
+
+/*Determinació de color de titol i posició del div*/
+header {
+    position: relative;
+    color: $colorlletra;
+    /*Fem que la imatge de fons ocupi tota l'amplada del lloc web*/
+    img{
+        width: $imatgeampl;
+    }
+    /*Determinem posició i tamany del text a sobre de la imatge del header*/
+    #titol{
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translate(0, -50%);
+        font-size: 1.5rem;
+        /*Fem que el text del header es fiqui quasi en negreta*/
+        h2{
+            font-weight: $fontweight;
+            /*Id del span del text del header, que volem que estigui en negreta*/
+            #negreta {
+                font-weight: bold;
+            }
+        }
+    }
+}

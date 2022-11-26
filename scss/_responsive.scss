@@ -1,0 +1,73 @@
+@media only screen and (max-width: 768px){
+    nav{
+        background-color: white;
+        a{
+            float: left;
+            margin-left: 20px;
+            color: black;
+        }
+    }
+    #img-float-left{
+        width: 100%;
+    }
+    #img-float-right{
+        width: 100%;
+    }
+    .grid-container {
+        /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+        grid-template: {
+            rows: 1fr 2fr 3fr 3fr 2fr 3fr 3fr;
+            areas:
+            "menusup menusup menusup"
+            "menu1 contingut contingut"
+            "menu1 fotopasta fotopasta"
+            "menu1 fotostarter fotostarter"
+            "menu2 contingut2 contingut2"
+            "menu2 fotomeat fotomeat"
+            "menu2 fotofish fotofish";
+        }
+    }
+    .flex-container>div {
+        width: 48%;
+    }
+
+}
+
+@media only screen and (max-width: 576px){
+    nav{
+        background-color: white;
+        a{
+            float: left;
+            margin-left: 20px;
+            color: black;
+        }
+    }
+    .text>img {
+        border-radius: 5%;
+        width: 100%;
+    }
+    .contenidor > h2 {
+        text-align: center;
+    }
+    .grid-container {
+
+        grid-template: {
+        /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+        rows: 1fr 1fr 2fr 3fr 3fr 1fr 2fr 3fr 3fr;
+        /*Determinació de quins espais ocupa cada div del grid*/
+        areas:
+            "menusup menusup menusup"
+            "menu1 menu1 menu1"
+            "contingut contingut contingut"
+            "fotopasta fotopasta fotopasta"
+            "fotostarter fotostarter fotostarter"
+            "menu2 menu2 menu2"
+            "contingut2 contingut2 contingut2"
+            "fotomeat fotomeat fotomeat"
+            "fotofish fotofish fotofish";
+        }
+    }
+    .flex-container>div {
+        width: 96%;
+    }
+}

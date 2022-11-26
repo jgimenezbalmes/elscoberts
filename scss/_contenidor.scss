@@ -1,0 +1,217 @@
+@mixin foto_img {
+    width: 100%;
+}
+
+
+@mixin padding_fotos {
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    position: relative;
+}
+
+@mixin text_fotos {
+    background-color: black;
+    opacity: 50%;
+    position: absolute;
+    bottom: -8px;
+    width: 96%;
+    color: white;
+    text-align: center;
+}
+
+/*Determinem tamany i marge del div que conté tot menys el header i el footer*/
+#contenidor {
+    width: 80%;
+    margin-left: 10%;
+
+    h2 {
+        margin-top: 4%;
+        margin-bottom: 2%;
+    }
+
+    .text {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 2%;
+
+        img {
+            border-radius: 5%;
+            width: 20%;
+
+        }
+    }
+
+    #img-float-left {
+        float: left;
+        margin-right: 2%;
+    }
+
+    #img-float-right {
+        float: right;
+        margin: 2%;
+    }
+
+    .grid-container {
+        display: grid;
+
+        grid-template: {
+            /*Hi ha tres columnes, la primera més petita, i les altres dos iguals*/
+            columns: 10% 45% 45%;
+            /*Hi ha cinc files, la primera més prima, la 2a i 4a més grans, i la 3a i 5a encara més*/
+            rows: 1fr 2fr 3fr 2fr 3fr;
+            /*Determinació de quins espais ocupa cada div del grid*/
+            areas:
+                "menusup menusup menusup"
+                "menu1 contingut contingut"
+                "menu1 fotopasta fotostarter"
+                "menu2 contingut2 contingut2"
+                "menu2 fotomeat fotofish";
+        }
+
+        gap: 0px 0px;
+
+        /*Determinacio del color de fons, tet, i marges de la part "menu" del grid*/
+        #menusup {
+            /*Amb grid-area correlacionem aquest id amb el que s'ha posat a grid-template-areas. Sera igual en els ids posteriors*/
+            grid-area: menusup;
+            text-align: center;
+            margin-bottom: 2%;
+            background-color: darkblue;
+            color: white;
+        }
+
+        /*Determinem marge, negreta i posició del text (centrat) de la cel·la del menu 1*/
+        #menu1 {
+            grid-area: menu1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            margin: 3%;
+            font-weight: bold;
+        }
+
+        /*A partir d'aqui es designen paddings de diferents divs*/
+
+        #contingut {
+            grid-area: contingut;
+            padding: 1%;
+        }
+
+        #fotopasta {
+            grid-area: fotopasta;
+            @include padding_fotos();
+
+            p {
+                @include text_fotos();
+            }
+
+            /*Es fica 100 % de width d'imatge dins el div per a que no sobresurti l'amplada d'aquest*/
+            img {
+                @include foto_img();
+            }
+        }
+
+
+        #fotostarter {
+            grid-area: fotostarter;
+            @include padding_fotos();
+
+            p {
+                @include text_fotos();
+            }
+
+            img {
+                @include foto_img();
+            }
+        }
+
+        #menu2 {
+            grid-area: menu2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            margin: 3%;
+            font-weight: bold;
+        }
+
+        #contingut2 {
+            grid-area: contingut2;
+            padding: 1%;
+        }
+
+        #fotomeat {
+            grid-area: fotomeat;
+            @include padding_fotos();
+
+            p {
+                @include text_fotos();
+            }
+
+            img {
+                @include foto_img();
+            }
+        }
+
+        #fotofish {
+            grid-area: fotofish;
+            @include padding_fotos();
+
+            p {
+                @include text_fotos();
+            }
+
+            img {
+                @include foto_img();
+            }
+        }
+    }
+
+
+    /*Determinem que aquesta classe té flex, i flex-wrap fa que els seus fills es puguin colocar en diverses linies*/
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        /*Determinacio d'amplada, borders, i margins de cadascun dels divs del flex-container*/
+        div {
+            background-color: white;
+            width: 24%;
+            border: 3px solid;
+            border-color: white;
+            margin-bottom: 1%;
+            margin-top: 1%;
+
+            .fosc {
+                /*Classe que fa que la imatge es vegi fosca per defecte (les de les vores)*/
+                filter: brightness(50%);
+            }
+
+            img {
+                width: 100%;
+
+                /*Imatge es fara mes fosca al fer hover*/
+                &hover {
+                    filter: brightness(40%);
+                }
+            }
+
+            /*Si fem hover a una imatge, sortira un border gris al voltant d'aquesta*/
+            &hover {
+                border: 3px solid gray;
+            }
+        }
+    }
+
+}
+
+
+/*Ens serveix per a que els elements saltin de linia quan l'amplada del navegador sigui menor a 780px*/
+@media (max-width: 780px) {
+    .flex-container>div {
+        /*Amb això, cada div ocuparà mig container, per tant, passaran de ser 4 per linia a ser 2*/
+        width: 48%;
+    }
+}

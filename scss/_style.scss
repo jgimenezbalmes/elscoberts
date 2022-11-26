@@ -1,0 +1,13 @@
+/* Establim tipus de font i tamany per a tot el lloc web */
+
+$fontfamily: Arial, Helvetica, sans-serif;
+$fontsize: 16px;
+
+body {
+    font: {
+        family: $fontfamily;
+        size: $fontsize;
+    }
+    margin: 0;
+    padding: 0;
+}
